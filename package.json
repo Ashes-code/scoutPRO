@@ -1,5 +1,6 @@
 {
   "name": "taskapp",
+  "homepage": "https://Ashes-code.github.io/scoutPRO/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,11 +9,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "css": "npx tailwindcss -i ./src/assets/tailwind/import.css -o ./src/assets/tailwind/export.css --watch",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "firebase": "^11.3.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
