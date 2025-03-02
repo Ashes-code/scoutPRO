@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Loader from "./loader";
 
 const Login = () => {
@@ -94,7 +94,7 @@ const Login = () => {
             </button>
           </form>
 
-          <p className="mt-5 text-center text-sm text-white">Don&apos;t have an account? <a href="/scoutPRO" className="text-[#BCEE31]">Sign up</a></p>
+          <p className="mt-5 text-center text-sm text-white">Don&apos;t have an account? <Link to="/scoutPRO" className="text-[#BCEE31]">Sign up</Link></p>
         </div>
       </div>
     </div>

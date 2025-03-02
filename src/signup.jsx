@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { auth, provider } from "./firebase";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Loader from "./Loader";
 
 const Signup = () => {
@@ -139,7 +139,7 @@ const Signup = () => {
           </div>
 
           <p className="mt-3 text-center text-sm text-white">
-            Already have an account? <a href="/scoutPRO/login" className="text-[#BCEE31]">Login</a>
+            Already have an account? <Link to="/scoutPRO/login" className="text-[#BCEE31]">Login</Link>
           </p>
         </div>
       </div>
