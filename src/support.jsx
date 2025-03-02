@@ -33,8 +33,8 @@ const Support = ({ toggleAside }) => {
 
         {/* Navigation Links */}
         <div className="hidden lg:flex gap-7">
-          <Link to="/dashboard" className="text-white rounded-3xl py-2 px-3">Scouting Plan</Link>
-          <Link to="/reports" className="rounded-3xl py-2 px-3">Report Statistics</Link>
+          <Link to="/scoutPRO/dashboard" className="text-white rounded-3xl py-2 px-3">Scouting Plan</Link>
+          <Link to="/scoutPRO/reports" className="rounded-3xl py-2 px-3">Report Statistics</Link>
         </div>
       </div>
 

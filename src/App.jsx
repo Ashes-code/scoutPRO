@@ -25,7 +25,7 @@ function App() {
   const asideRef = useRef(null); // Reference for sidebar
 
   // Hide sidebar if the user is on login or signup pages
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/" ;
+  const isAuthPage = location.pathname === "/scoutPRO/login" || location.pathname === "/scoutPRO/" || location.pathname === "/scoutPRO";
 
   // Toggle function
   const toggleAside = () => {
@@ -61,7 +61,7 @@ function App() {
             } lg:translate-x-0`}
           >
             {/* Logo */}
-            <Link to="/" className={`flex items-center gap-3 cursor-pointer py-2 px-4 rounded-full ${location.pathname === "/" ? "bg-transparent" : "hover:bg-transparent"}`}>
+            <Link to="/scoutPRO" className={`flex items-center gap-3 cursor-pointer py-2 px-4 rounded-full ${location.pathname === "/" ? "bg-transparent" : "hover:bg-transparent"}`}>
               <img src={logo} alt="Logo" className="w-6 h-6 text-green-400" />
               <h1 className="text-white font-Inter text-lg">Scout PRO</h1>
               </Link>
@@ -77,34 +77,34 @@ function App() {
 
             {/* Navigation Links */}
             <div className="links flex flex-col gap-6 mt-8 text-white">
-              <Link to="/dashboard" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/dashboard" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/dashboard" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/dashboard" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={dashboardIcon} alt="Dashboard" className="w-5 h-5" />
                 <span>Dashboard</span>
               </Link>
-              <Link to="/reports" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/reports" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/reports" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/reports" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={reportsIcon} alt="Reports" className="w-5 h-5" />
                 <span>Reports</span>
               </Link>
-              <Link to="/players" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/players" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/players" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/players" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={playersIcon} alt="All Players" className="w-5 h-5" />
                 <span>All players</span>
               </Link>
-              <Link to="/notifications" className={`flex items-center gap-3 cursor-pointer relative hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/notifications" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/notifications" className={`flex items-center gap-3 cursor-pointer relative hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/notifications" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={notificationsIcon} alt="Notifications" className="w-5 h-5" />
                 <span>Notifications</span>
                 <span className="w-2 h-2 bg-[#BCEE31] rounded-full absolute right-2"></span>
               </Link>
-              <Link to="/settings" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/settings" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/settings" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/settings" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={settingsIcon} alt="Settings" className="w-5 h-5" />
                 <span>Settings</span>
               </Link>
-              <Link to="/support" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/support" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
+              <Link to="/scoutPRO/support" className={`flex items-center gap-3 cursor-pointer hover:bg-[#1D1D1D] py-2 px-4 rounded-full ${location.pathname === "/support" ? "bg-[#1D1D1D]" : "hover:bg-[#1D1D1D]"}`}>
                 <img src={supportIcon} alt="Support" className="w-5 h-5" />
                 <span>Support</span>
               </Link>
             </div>
 
-            <Link to="/profile" className="text-white bottom-2 flex items-center gap-3 hover:bg-[#1D1D1D] absolute py-2 px-4 rounded-full cursor-pointer">
+            <Link to="/scoutPRO/profile" className="text-white bottom-2 flex items-center gap-3 hover:bg-[#1D1D1D] absolute py-2 px-4 rounded-full cursor-pointer">
               <img src={profile} alt="Profile Image"/>
               John White
             </Link>
@@ -114,15 +114,15 @@ function App() {
         {/* Main Content (Updates based on route passed as a prop) */}
         <div className={`main h-screen overflow-y-auto ${isAuthPage ? "w-full" : "sm:w-[100%] lg:w-[80%]"} bg-black overflow-y-hidden shadow-xl rounded-lg p-5`}>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard toggleAside={toggleAside} />} />
-            <Route path="/reports" element={<Reports toggleAside={toggleAside}/>} />
-            <Route path="/players" element={<Players toggleAside={toggleAside}/>} />
-            <Route path="/notifications" element={<Notifications toggleAside={toggleAside}/>} />
-            <Route path="/settings" element={<Settings toggleAside={toggleAside}/>} />
-            <Route path="/support" element={<Support toggleAside={toggleAside}/>} />
-            <Route path="/profile" element={<Profile toggleAside={toggleAside}/>} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/" element={<Signup />} />
+            <Route path="/scoutPRO/dashboard" element={<Dashboard toggleAside={toggleAside} />} />
+            <Route path="/scoutPRO/reports" element={<Reports toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/players" element={<Players toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/notifications" element={<Notifications toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/settings" element={<Settings toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/support" element={<Support toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/profile" element={<Profile toggleAside={toggleAside}/>} />
+            <Route path="/scoutPRO/login" element={<Login />} />
+            <Route path="/scoutPRO" element={<Signup />} />
           </Routes>
         </div>
 

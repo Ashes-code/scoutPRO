@@ -207,8 +207,8 @@ const Dashboard = ({ toggleAside }) => {
         <h1 className="text-lg lg:text-2xl font-semibold flex items-center">Dashboard</h1>
         <img src={hamburger} alt="hamburger icon" className="h-6 flex cursor-pointer lg:hidden" onClick={toggleAside} />
         <div className="hidden lg:flex gap-7">
-          <Link to="/dashboard" className="text-black bg-[#BCEE31] flex items-center rounded-3xl py-2 px-3">Scouting Plan</Link>
-          <Link to="/reports" className="rounded-3xl py-2 px-3 flex items-center">Report Statistics</Link>
+          <Link to="/scoutPRO/dashboard" className="text-black bg-[#BCEE31] flex items-center rounded-3xl py-2 px-3">Scouting Plan</Link>
+          <Link to="/scoutPRO/reports" className="rounded-3xl py-2 px-3 flex items-center">Report Statistics</Link>
         </div>
       </div>
       
@@ -329,57 +329,6 @@ const Dashboard = ({ toggleAside }) => {
           </div> 
         </div>
       </div>
-
-      {/* <div className="mt-6 space-y-4">
-        {users.map((user) => (
-          <div key={user.id} className="bg-[#2B2B2B] p-4 rounded-xl relative">
-            <div className="flex items-center gap-2">
-              <h3 className="text-lg font-semibold">{user.name}</h3>
-              <Menu as="div" className="ml-auto relative">
-                <MenuButton className="p-2 rounded-full hover:bg-gray-700">
-                  <Settings size={18} />
-                </MenuButton>
-                <MenuItems className="absolute right-0 mt-2 w-40 bg-black shadow-lg rounded-xl p-2 z-10">
-                  <MenuItem>
-                    {({ active }) => (
-                      <button className={`flex items-center w-full p-2 rounded-md text-sm gap-1 ${active ? "bg-gray-700" : ""}`} onClick={() => handlePriorityChange(user.id, user.priority)}>
-                        <Flag size={12} /> Change priority
-                      </button>
-                    )}
-                  </MenuItem>
-                  <MenuItem>
-                    {({ active }) => (
-                      <button className={`flex items-center gap-2 w-full p-2 rounded-md ${active ? "bg-gray-700" : ""}`} onClick={() => handleTypeChange(user.id, user.type)}>
-                        <Repeat size={12} /> Change type
-                      </button>
-                    )}
-                  </MenuItem>
-                  <MenuItem>
-                    {({ active }) => (
-                      <button className={`flex items-center gap-2 w-full p-2 rounded-md text-red-500 ${active ? "bg-red-700 text-white" : ""}`} onClick={() => handleDelete(user.id)}>
-                        <Trash2 size={12} /> Delete
-                      </button>
-                    )}
-                  </MenuItem>
-                </MenuItems>
-              </Menu>
-            </div>
-            <div className="flex justify-between mt-2 flex-col gap-4">
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-gray-400">Priority</p>
-                <span className={`text-xs font-semibold px-3 py-1 rounded-full text-white ${priorityColors[user.priority]}`}>{user.priority}</span>
-              </div>
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-xs text-gray-400">Type</p>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-semibold text-white">{user.type}</span>
-                  <img src={user.typeImage} alt={user.type} className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div> */}
 
       {/* Modals */}
       <TaskCardModal isOpen={isTaskCardModalOpen} onClose={() => setIsTaskCardModalOpen(false)} onSave={addTaskCard} />

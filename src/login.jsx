@@ -23,7 +23,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in:", userCredential.user);
       alert("Login successful!");
-      navigate("/dashboard");
+      navigate("/scoutPRO/dashboard");
       setLoading(false);
     } catch (error) {
       console.error("Login error:", error.message);
@@ -94,7 +94,7 @@ const Login = () => {
             </button>
           </form>
 
-          <p className="mt-5 text-center text-sm text-white">Don&apos;t have an account? <a href="/signup" className="text-[#BCEE31]">Sign up</a></p>
+          <p className="mt-5 text-center text-sm text-white">Don&apos;t have an account? <a href="/scoutPRO" className="text-[#BCEE31]">Sign up</a></p>
         </div>
       </div>
     </div>

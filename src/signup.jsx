@@ -22,7 +22,7 @@ const Signup = () => {
       .then((userCredential) => {
         console.log("User signed up successfully:", userCredential.user);
         alert("Signup successful!");
-        navigate("/dashboard");
+        navigate("/scoutPRO/dashboard");
       })
       .catch((error) => {
         console.error("Signup error:", error.message);
@@ -35,7 +35,7 @@ const Signup = () => {
     setLoading(true);
     try {
       await signInWithPopup(auth, provider);
-      navigate("/dashboard");
+      navigate("/scoutPRO/dashboard");
     } catch (err) {
       console.log(err);
     } finally {
@@ -139,7 +139,7 @@ const Signup = () => {
           </div>
 
           <p className="mt-3 text-center text-sm text-white">
-            Already have an account? <a href="/login" className="text-[#BCEE31]">Login</a>
+            Already have an account? <a href="/scoutPRO/login" className="text-[#BCEE31]">Login</a>
           </p>
         </div>
       </div>

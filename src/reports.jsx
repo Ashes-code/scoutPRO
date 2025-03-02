@@ -40,8 +40,8 @@ const Reports = ({ toggleAside }) => {
                     onClick={toggleAside} 
                 />
                 <div className="hidden lg:flex gap-7">
-                    <Link to="/dashboard" className="text-white flex items-center rounded-3xl py-2 px-3">Scouting Plan</Link>
-                    <Link to="/reports" className="text-black rounded-3xl bg-[#BCEE31] py-2 px-3 flex items-center">Report Statistics</Link>
+                    <Link to="/scoutPRO/dashboard" className="text-white flex items-center rounded-3xl py-2 px-3">Scouting Plan</Link>
+                    <Link to="/scoutPRO/reports" className="text-black rounded-3xl bg-[#BCEE31] py-2 px-3 flex items-center">Report Statistics</Link>
                 </div>
             </div>
 
